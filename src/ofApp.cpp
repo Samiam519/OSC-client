@@ -46,11 +46,11 @@ void ofApp::mouseDragged(int x, int y, int button){
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
     ofxOscMessage m;
-    m.setAddress("/mrmr/accelerometerX/33/Clays-6");
+    m.setAddress("/mrmr/mouseClickX/33/Clays-6");
     m.addIntArg(mouseX);
     client.sendMessage(m, false);
     m.clear();
-    m.setAddress("/mrmr/accelerometerY/33/Clays-6");
+    m.setAddress("/mrmr/mouseClickY/33/Clays-6");
     m.addIntArg(mouseY);
     client.sendMessage(m, false);
 }
